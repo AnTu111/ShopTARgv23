@@ -1,0 +1,11 @@
+﻿@model ShopTARgv23.Models.Spaceships.FileToApiViewModel
+
+@{
+    var photoPaths = "~/multipleFileUpload/" + (Model.FilePath ?? "noimage.jpg");
+    //kui pilti ei ole ankeedis e multipleFileUploadis, siis n'ita noimage.jpg
+}
+
+<div class="form-group row col-sm-4 offset-2">
+    <div>@Model.FilePath</div>
+    <img class="card-img-top" src="@photoPaths" asp-append-version="true" />
+</div>
